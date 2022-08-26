@@ -9,12 +9,12 @@ export default function ArticleCard( {article} ) {
         <div className="card py-3 my-3">
             <div className="row">
                 <div className="image col-md-3 col-lg-3 col-12">
-                    <div className='text-center'>
-                        <Link href={article.link}>
-                            <a className=''>
+                    <div className="text-center">
+                        {/* <Link href={article.link}> */}
+                            {/* <a className=''> */}
                                 <Image src={article.media.thumbnail.url} height={300} width={300} alt={article.title} />
-                            </a>
-                        </Link>
+                            {/* </a> */}
+                        {/* </Link> */}
                     </div>
                 </div>
                 <div className="details col-md-9 col-lg-9 col-12">
@@ -29,9 +29,9 @@ export default function ArticleCard( {article} ) {
                         { article.category.map( (category) => <Categories key={category} category={category} /> ) }
                     </div>
                     <div className="text-secondary" dangerouslySetInnerHTML={{__html : article.description}} />
-                    <Link href={article.link}>
+                    {/* <Link href={article.link}> */}
                         <a className="btn btn-primary">Read More</a>
-                    </Link>
+                    {/* </Link> */}
                 </div>
             </div>
         </div>
