@@ -7,13 +7,13 @@ import styles from '@/styles/ArticleCard.module.css'
 
 export default function ArticleCard( {article} ) {
     return (
-        <article className={ "py-3 my-3 " + styles.border}>
+        <article className={ "my-3 " + styles.article}>
             <div className="row">
                 <div className="image col-md-3 col-lg-3 col-12">
                     <div className="text-center">
                         <Link href={article.link}>
                             <a className=''>
-                                <Image src={article.media.thumbnail.url} height={300} width={300} alt={article.title} className={ "img-responsive" +styles.image} />
+                                <Image src={article.media.thumbnail.url} width="100%" height="100%"  alt={article.title} className={ "img-fluid" +styles.image} layout="responsive"  />
                             </a>
                         </Link>
                     </div>

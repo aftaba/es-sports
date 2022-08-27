@@ -30,7 +30,7 @@ export default function SEO( props ) {
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} /> 
 
-
+            {/* Add LD-JSON  */}
         </Head>
     )
 }

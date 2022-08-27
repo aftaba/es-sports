@@ -1,13 +1,14 @@
 .articleContainer{
-    border:1px solid #bbb;
     padding: 1rem;
     margin: 2rem;
 }
 
+.bgLight{
+    background-color: #fafafa;
+}
 @media (max-width: 992px) {
     
     .articleContainer{
-        border:none;
         margin: 0px;
     }
 

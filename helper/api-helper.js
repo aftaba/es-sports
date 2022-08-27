@@ -19,7 +19,6 @@ export const getLatestArticles = async () => {
         console.log("API Failed");
     }
 
-    console.log( results );
-    
+ 
     return JSON.parse(JSON.stringify(results));
 }

@@ -4,11 +4,11 @@ import SEO from '@/components/SEO';
 import HeroBanner from '@/components/HeroBanner';
 import styles from '@/styles/Home.module.css';
 
+
 export default function Home( { articles } ) {
     
-
     return ( 
-        <>
+        <div className={styles.bgLight}>
             <SEO  />
             <HeroBanner />
             <div className="container">
@@ -17,7 +17,7 @@ export default function Home( { articles } ) {
                     { articles && articles.map( (article, index) => <ArticleCard key={index} article={article} /> ) }
                 </div>
             </div>
-        </>    
+        </div>    
     )
 }
 
