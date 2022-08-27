@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
-export default function SEO() {
+export default function SEO( props ) {
+
+    
     return (
         <Head>
             <title></title>

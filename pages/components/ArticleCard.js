@@ -4,36 +4,45 @@ import Categories from './Categories';
 import React from 'react';
 import moment from 'moment';
 
+import styles from './ArticleCard.module.css'
+
 export default function ArticleCard( {article} ) {
+    console.log( "article", styles );
     return (
-        <div className="card py-3 my-3">
+
+        <article className={ "py-3 my-3 " + styles.border}>
             <div className="row">
                 <div className="image col-md-3 col-lg-3 col-12">
                     <div className="text-center">
-                        {/* <Link href={article.link}> */}
-                            {/* <a className=''> */}
-                                <Image src={article.media.thumbnail.url} height={300} width={300} alt={article.title} />
-                            {/* </a> */}
-                        {/* </Link> */}
+                        <Link href={article.link}>
+                            <a className=''>
+                                <Image src={article.media.thumbnail.url} height={300} width={300} alt={article.title} className={ "img-responsive" +styles.image} />
+                            </a>
+                        </Link>
                     </div>
                 </div>
-                <div className="details col-md-9 col-lg-9 col-12">
-                    <div className="row">
-                        <div className="col-md-6 col-12"><span > <strong>Author </strong>{article.author}</span></div>
-                        <div className="col-md-6 col-12 text-right"><span ><strong>Published: </strong> { moment(article.published).fromNow() }</span></div>
-                    </div>
-                    <h5>
-                        <div dangerouslySetInnerHTML={{__html:article.title}} /> 
-                    </h5>
+                <div className={ styles.detail + "col-md-9 col-lg-9 col-12" }>
                     <div className='category-list'>
-                        { article.category.map( (category) => <Categories key={category} category={category} /> ) }
+                        { article.category?.[0] }
+                        {/* { article.category.map( (category) => <Categories key={category} category={category} /> ) } */}
                     </div>
-                    <div className="text-secondary" dangerouslySetInnerHTML={{__html : article.description}} />
-                    {/* <Link href={article.link}> */}
-                        <a className="btn btn-primary">Read More</a>
-                    {/* </Link> */}
+                    
+                    <h3>
+                        <Link href={article.link}>
+                            <a className={styles.title}>
+                                <div dangerouslySetInnerHTML={{__html:article.title}} /> 
+                            </a>
+                        </Link>
+                    </h3>
+                    <div className={ "text-secondary " + styles.wrap } dangerouslySetInnerHTML={{__html : article.description}} />
+                    <div className="row">
+                        <div className="col-12">
+                            <span > {article.author}</span>
+                            <span className='text-secondary mx-2'>{ moment(article.published).fromNow() }</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }

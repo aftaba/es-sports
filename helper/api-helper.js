@@ -1,7 +1,9 @@
+import { API_URL } from '../config/constant'
+
 
 export const getLatestArticles = async (locale, slug) => {
     
-    let url = `${process.env.NEXT_PUBLIC_API_URL}/api/articles`;
+    let url = `${API_URL}/api/articles`;
     const requestOptions = {
         method: "GET",
     };

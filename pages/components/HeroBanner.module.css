@@ -1,0 +1,9 @@
+
+.main{
+    height: 350px;
+    background-image:url('/images/banner.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+}
