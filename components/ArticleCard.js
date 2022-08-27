@@ -9,7 +9,7 @@ export default function ArticleCard( {article} ) {
     return (
         <article className={ "my-3 " + styles.article}>
             <div className="row">
-                <div className="image col-md-3 col-lg-3 col-12">
+                <div className="image col-sm-3 col-12">
                     <div className="text-center">
                         <Link href={article.link}>
                             <a className=''>
@@ -18,9 +18,9 @@ export default function ArticleCard( {article} ) {
                         </Link>
                     </div>
                 </div>
-                <div className={ styles.details + "col-md-9 col-lg-9 col-12" }>
-                    <div className='category-list'>
-                        { article.category?.[0] }
+                <div className={ styles.details + " col-sm-9 col-12" }>
+                    <div className="category-list my-2">
+                        <span className={styles.badge}>{ article.category?.[0] }</span>
                         {/* { article.category.map( (category) => <Categories key={category} category={category} /> ) } */}
                     </div>
                     
@@ -34,8 +34,10 @@ export default function ArticleCard( {article} ) {
                     <div className={ "text-secondary " + styles.wrap } dangerouslySetInnerHTML={{__html : article.description}} />
                     <div className="row">
                         <div className="col-12">
-                            <span > {article.author}</span>
-                            <span className='text-secondary mx-2'>{ moment(article.published).fromNow() }</span>
+                            <div className="d-flex ">
+                                <span className='justify-content-start'> <strong>By </strong>{article.author}</span>
+                                <span className='text-secondary mx-2 justify-content-end'>{ moment(article.published).fromNow() }</span>
+                            </div>
                         </div>
                     </div>
                 </div>
