@@ -18,7 +18,7 @@ export default function ArticleCard( {article} ) {
                         </Link>
                     </div>
                 </div>
-                <div className={ styles.detail + "col-md-9 col-lg-9 col-12" }>
+                <div className={ styles.details + "col-md-9 col-lg-9 col-12" }>
                     <div className='category-list'>
                         { article.category?.[0] }
                         {/* { article.category.map( (category) => <Categories key={category} category={category} /> ) } */}

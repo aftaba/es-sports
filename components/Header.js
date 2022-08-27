@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Header() {
@@ -5,11 +6,11 @@ export default function Header() {
         <header>
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand">ES - Sports</a>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" ariaLabel="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    <div className="text-center">
+                        <Link href="/">
+                            <a className="navbar-brand ">ES - Sports</a>
+                        </Link>
+                    </div>
                 </div>
             </nav>
         </header>

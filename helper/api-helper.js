@@ -1,9 +1,9 @@
-import { API_URL } from '@/config/constant'
+import { APP_URL } from '@/config/constant'
 
 
 export const getLatestArticles = async (locale, slug) => {
     
-    let url = `${API_URL}/api/articles`;
+    let url = `${APP_URL}/api/articles`;
     const requestOptions = {
         method: "GET",
     };

@@ -1,1 +1,3 @@
-export const API_URL = process.env.VERCEL_URL ? process.env.Vercel_URL : 'http://localhost:3000';
+export const APP_URL = process.env.VERCEL_URL ? process.env.VERCEL_URL : 'http://localhost:3000';
+
+

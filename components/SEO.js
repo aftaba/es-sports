@@ -1,27 +1,36 @@
 import Head from 'next/head'
+import { seoData } from '@/config/seoData';
 
 export default function SEO( props ) {
 
+    let { title, description, image, appName, type, appUrl  } = seoData;
     
     return (
         <Head>
-            <title></title>
-            <meta name="description" content="" />
-            <meta property="og:type" content="website" />
-            <meta name="og:title" property="og:title" content="" />
-            <meta name="og:description" property="og:description" content="" />
-            <meta property="og:site_name" content="" />
-            <meta property="og:url" content="" />  
-            <meta name="twitter:card" content="summary" /> 
-            <meta name="twitter:title" content="" />
-            <meta name="twitter:description" content="" />
-            <meta name="twitter:site" content="" />
-            <meta name="twitter:creator" content="" />
-            <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
-            <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
-            <meta property="og:image" content="" />  
-            <meta name="twitter:image" content="" />   
-            <link rel="canonical" href="" />
+            
+            <title>{title} | {appName} </title>
+            <meta name="description" content={description} />
+            <meta name="robots" content="follow, index"/>
+
+            <meta itemProp="name" content={title} />
+            <meta itemProp="description" content={description} />
+            <meta itemProp="image" content={image} /> 
+
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:type" content={type} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:url" content={appUrl} />
+            <meta property="og:site_name" content={appName} />
+            <meta property="og:image" content={image} />
+            <meta property="og:image:secure_url" content={image} />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={image} /> 
+
+
         </Head>
     )
 }
