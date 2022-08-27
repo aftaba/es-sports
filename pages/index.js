@@ -4,7 +4,6 @@ import SEO from '@/components/SEO';
 import HeroBanner from '@/components/HeroBanner';
 import styles from '@/styles/Home.module.css';
 
-
 export default function Home( { articles } ) {
     
 
@@ -25,6 +24,7 @@ export default function Home( { articles } ) {
 
 
 export async function getStaticProps( context ) {
+        
     return {
         props : {
             articles : await getLatestArticles(),
