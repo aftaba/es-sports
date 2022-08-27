@@ -1,5 +1,5 @@
 
-import styles from './HeroBanner.module.css';
+import styles from '@/styles/HeroBanner.module.css';
 
 
 export default function HeroBanner() {

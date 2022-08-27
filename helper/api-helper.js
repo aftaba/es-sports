@@ -1,4 +1,4 @@
-import { API_URL } from '../config/constant'
+import { API_URL } from '@/config/constant'
 
 
 export const getLatestArticles = async (locale, slug) => {

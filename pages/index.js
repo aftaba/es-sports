@@ -1,8 +1,8 @@
-import { getLatestArticles } from '../helper/api-helper';
-import ArticleCard from './components/ArticleCard';
-import SEO from './components/SEO';
-import HeroBanner from './components/HeroBanner';
-import styles from '../styles/Home.module.css';
+import { getLatestArticles } from '@/helper/api-helper';
+import ArticleCard from '@/components/ArticleCard'
+import SEO from '@/components/SEO';
+import HeroBanner from '@/components/HeroBanner';
+import styles from '@/styles/Home.module.css';
 
 export default function Home( { articles } ) {
     

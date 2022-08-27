@@ -1,15 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Categories from './Categories';
 import React from 'react';
 import moment from 'moment';
 
-import styles from './ArticleCard.module.css'
+import styles from '@/styles/ArticleCard.module.css'
 
 export default function ArticleCard( {article} ) {
-    console.log( "article", styles );
     return (
-
         <article className={ "py-3 my-3 " + styles.border}>
             <div className="row">
                 <div className="image col-md-3 col-lg-3 col-12">
