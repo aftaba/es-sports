@@ -36,11 +36,11 @@
 }
 
 .badge{
-    background-color: #777;
+    background-color: #bb4a4a;
     color:white;
     border-radius: 3px;
     padding: 5px;
-    margin: 0px 5px;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 992px) {

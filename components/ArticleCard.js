@@ -34,9 +34,9 @@ export default function ArticleCard( {article} ) {
                     <div className={ "text-secondary " + styles.wrap } dangerouslySetInnerHTML={{__html : article.description}} />
                     <div className="row">
                         <div className="col-12">
-                            <div className="d-flex ">
-                                <span className='justify-content-start'> <strong>By </strong>{article.author}</span>
-                                <span className='text-secondary mx-2 justify-content-end'>{ moment(article.published).fromNow() }</span>
+                            <div className="d-flex justify-content-between">
+                                <span className=""> <strong>By </strong>{article.author}</span>
+                                <span className="text-secondary mx-2">{ moment(article.published).fromNow() }</span>
                             </div>
                         </div>
                     </div>

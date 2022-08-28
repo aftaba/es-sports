@@ -1,11 +1,13 @@
 
 .main{
     height: 350px;
-    background-image:url('/images/banner.jpg');
+    background:linear-gradient(0deg, rgb(69 62 66 / 22%), rgb(58 58 58 / 66%)), url('/images/banner.jpg');
+    /* background-image:url('/images/banner.jpg'); */
     background-size: cover;
     color: white;
     display: flex;
     align-items: center;
+    margin-top: 60px;
 }
 
 @media (max-width: 992px) {
