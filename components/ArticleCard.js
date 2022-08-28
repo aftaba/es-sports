@@ -35,7 +35,7 @@ export default function ArticleCard( {article} ) {
                     <div className="row">
                         <div className="col-12">
                             <div className="d-flex justify-content-between">
-                                <span className=""> <strong>By </strong>{article.author}</span>
+                                <span className={styles.textMaroon}> {article.author}</span>
                                 <span className="text-secondary mx-2">{ moment(article.published).fromNow() }</span>
                             </div>
                         </div>

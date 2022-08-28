@@ -20,7 +20,13 @@
 .title{
     color: #222;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
+
 .title:hover{
     color: #444;
     text-decoration: none;
@@ -33,6 +39,10 @@
 }
 .details p:last-child{
     display: none;
+}
+
+.textMaroon{
+    color: #bb4a4a;
 }
 
 .badge{
